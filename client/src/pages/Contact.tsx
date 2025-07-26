@@ -84,11 +84,11 @@ export default function Contact() {
           
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
+            <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Full Name */}
                 <div>
-                  <Label htmlFor="fullName" className="text-cream font-medium">Full Name *</Label>
+                  <Label htmlFor="fullName" className="text-slate-700 font-semibold">Full Name *</Label>
                   <Input
                     id="fullName"
                     name="fullName"
@@ -96,14 +96,14 @@ export default function Contact() {
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
+                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
                     placeholder="Enter your full name"
                   />
                 </div>
                 
                 {/* Email */}
                 <div>
-                  <Label htmlFor="email" className="text-cream font-medium">Email Address *</Label>
+                  <Label htmlFor="email" className="text-slate-700 font-semibold">Email Address *</Label>
                   <Input
                     id="email"
                     name="email"
@@ -111,14 +111,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
+                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 
                 {/* WhatsApp Number */}
                 <div>
-                  <Label htmlFor="whatsapp" className="text-cream font-medium">WhatsApp Number *</Label>
+                  <Label htmlFor="whatsapp" className="text-slate-700 font-semibold">WhatsApp Number *</Label>
                   <Input
                     id="whatsapp"
                     name="whatsapp"
@@ -126,19 +126,19 @@ export default function Contact() {
                     required
                     value={formData.whatsapp}
                     onChange={handleInputChange}
-                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
+                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
                     placeholder="+91 9876543210"
                   />
                 </div>
                 
                 {/* Preferred Reading */}
                 <div>
-                  <Label className="text-cream font-medium">Preferred Reading *</Label>
+                  <Label className="text-slate-700 font-semibold">Preferred Reading *</Label>
                   <Select value={formData.service} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold font-medium">
+                    <SelectTrigger className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
-                    <SelectContent className="bg-cream border-warm-gold/50">
+                    <SelectContent className="bg-white border-purple-300">
                       <SelectItem value="palmistry">Palm Reading (₹1,200)</SelectItem>
                       <SelectItem value="kundali">Kundali & Birth Chart (₹1,800)</SelectItem>
                       <SelectItem value="horoscope">Horoscope & Remedies (From ₹500)</SelectItem>
@@ -152,39 +152,39 @@ export default function Contact() {
                 {/* Preferred Date/Time */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="date" className="text-cream font-medium">Preferred Date</Label>
+                    <Label htmlFor="date" className="text-slate-700 font-semibold">Preferred Date</Label>
                     <Input
                       id="date"
                       name="date"
                       type="date"
                       value={formData.date}
                       onChange={handleInputChange}
-                      className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream font-medium"
+                      className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="time" className="text-cream font-medium">Preferred Time</Label>
+                    <Label htmlFor="time" className="text-slate-700 font-semibold">Preferred Time</Label>
                     <Input
                       id="time"
                       name="time"
                       type="time"
                       value={formData.time}
                       onChange={handleInputChange}
-                      className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream font-medium"
+                      className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
                     />
                   </div>
                 </div>
                 
                 {/* Message */}
                 <div>
-                  <Label htmlFor="message" className="text-cream font-medium">Message / Questions</Label>
+                  <Label htmlFor="message" className="text-slate-700 font-semibold">Message / Questions</Label>
                   <Textarea
                     id="message"
                     name="message"
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream resize-none font-medium"
+                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 resize-none font-medium"
                     placeholder="Share any specific questions or areas you'd like guidance on..."
                   />
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg animate-glow"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
                 >
                   <i className="fas fa-crystal-ball mr-2"></i>
                   Request My Divine Session

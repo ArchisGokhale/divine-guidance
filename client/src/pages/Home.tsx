@@ -186,52 +186,52 @@ export default function Home() {
         </div>
         
         {/* Cosmic Birthday Calculator */}
-        <div ref={calculatorRef} className="relative py-20 bg-gradient-to-r from-royal-purple/30 to-deep-indigo/30">
+        <div ref={calculatorRef} className="relative py-20 bg-white/95 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-cream mb-4">Discover Your Spiritual Number</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
-              <p className="text-lg text-cream/80">Enter your birth date to reveal your cosmic influence and spiritual path</p>
+              <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-slate-800 mb-4">Discover Your Spiritual Number</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-purple-600 mx-auto mb-6"></div>
+              <p className="text-lg text-slate-600">Enter your birth date to reveal your cosmic influence and spiritual path</p>
             </div>
             
-            <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
+            <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <Label htmlFor="birthDate" className="text-cream font-medium mb-2 block text-lg">Your Birth Date</Label>
+                  <Label htmlFor="birthDate" className="text-slate-700 font-semibold mb-3 block text-lg">Your Birth Date</Label>
                   <Input
                     id="birthDate"
                     type="date"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
-                    className="mb-4 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream placeholder:text-deep-indigo/70 font-medium"
+                    className="mb-6 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium text-lg p-4 rounded-lg"
                   />
                   <Button
                     onClick={calculateSpiritualNumber}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 shadow-lg border-2 border-transparent"
+                    className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 shadow-lg text-lg"
                   >
-                    <i className="fas fa-calculator mr-2 text-deep-indigo"></i>
-                    <span className="text-deep-indigo">Calculate My Spiritual Number</span>
+                    <i className="fas fa-calculator mr-2"></i>
+                    Calculate My Spiritual Number
                   </Button>
                 </div>
                 
                 <div className="text-center">
                   {spiritualInsight ? (
-                    <div className="space-y-4">
-                      <div className="text-6xl font-bold text-warm-gold animate-glow">{spiritualInsight.number}</div>
-                      <div className="space-y-2">
-                        <p className="text-xl font-playfair text-cream">Ruling Planet: <span className="text-warm-gold">{spiritualInsight.planet}</span></p>
-                        <p className="text-lg text-cream/90">Lucky Color: <span className="text-warm-gold">{spiritualInsight.color}</span></p>
-                        <p className="text-lg text-cream/90">Soul Trait: <span className="text-warm-gold">{spiritualInsight.trait}</span></p>
-                        <div className="mt-4 p-4 bg-deep-indigo/30 rounded-lg">
-                          <p className="text-sm text-cream/70 mb-1">Your Personal Mantra</p>
-                          <p className="text-lg font-devanagari text-warm-gold">{spiritualInsight.mantra}</p>
+                    <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-xl p-6 border border-purple-200">
+                      <div className="text-6xl font-bold text-purple-600 animate-pulse mb-4">{spiritualInsight.number}</div>
+                      <div className="space-y-3">
+                        <p className="text-lg font-semibold text-slate-700">Ruling Planet: <span className="text-purple-600">{spiritualInsight.planet}</span></p>
+                        <p className="text-base text-slate-600">Lucky Color: <span className="text-purple-600 font-medium">{spiritualInsight.color}</span></p>
+                        <p className="text-base text-slate-600">Soul Trait: <span className="text-purple-600 font-medium">{spiritualInsight.trait}</span></p>
+                        <div className="mt-4 p-4 bg-purple-100 rounded-lg border border-purple-200">
+                          <p className="text-sm text-slate-600 mb-2 font-medium">Your Personal Mantra</p>
+                          <p className="text-lg font-devanagari text-purple-700 font-semibold">{spiritualInsight.mantra}</p>
                         </div>
                       </div>
                     </div>
                   ) : (
-                    <div className="space-y-4">
-                      <div className="text-6xl text-warm-gold/50">?</div>
-                      <p className="text-cream/70">Enter your birth date to discover your spiritual essence</p>
+                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                      <div className="text-6xl text-slate-400 mb-4">?</div>
+                      <p className="text-slate-500">Enter your birth date to discover your spiritual essence</p>
                     </div>
                   )}
                 </div>
