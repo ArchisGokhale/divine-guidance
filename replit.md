@@ -26,9 +26,10 @@ Preferred communication style: Simple, everyday language.
 
 ### Design System
 - **Component Library**: Custom implementation using Radix UI primitives
-- **Theme**: Dark spiritual theme with deep indigo background, warm gold accents, and copper highlights
+- **Theme**: Bright purple spiritual theme with vibrant purple gradients, yellow accents, and white backgrounds for maximum readability
 - **Typography**: Custom font stack including Playfair Display, Inter, and Noto Serif Devanagari for Sanskrit text
 - **Responsive Design**: Mobile-first approach with custom breakpoints
+- **Color Palette**: Purple-600/700 primary, Yellow-300/400 accents, White/Purple-50 backgrounds, excellent contrast ratios
 
 ## Key Components
 
@@ -50,8 +51,10 @@ Preferred communication style: Simple, everyday language.
 - Sanskrit text integration with Devanagari font support
 - Mandala and lotus imagery placeholders
 - Om symbols and celestial decorations
-- Gradient backgrounds mimicking cosmic themes
-- Golden border effects and glowing animations
+- Bright purple gradient backgrounds with cosmic themes
+- Yellow accent borders and vibrant animations
+- Last panels on every page feature extra bright purple gradients for maximum visual impact
+- All forms and interactive elements use white backgrounds with dark text for perfect readability
 
 ## Data Flow
 

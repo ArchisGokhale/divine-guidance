@@ -63,7 +63,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative">
+      <section className="py-20 bg-white/95 backdrop-blur-sm relative">
         {/* Spiritual background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 text-warm-gold/10 text-6xl animate-float-slow">🕉</div>
@@ -75,9 +75,9 @@ export default function Contact() {
         
         <div ref={contactRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-cream mb-4">Book Your Divine Session</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
-            <p className="text-xl text-cream/80 max-w-3xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-purple-800 mb-4">Book Your Divine Session</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
               Ready to embark on your spiritual journey? Connect with Sheetal for personalized cosmic guidance and divine insights.
             </p>
           </div>
@@ -202,59 +202,59 @@ export default function Contact() {
             
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
-                <h3 className="text-2xl font-playfair font-semibold text-warm-gold mb-6">Contact Information</h3>
+              <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-8 border-2 border-purple-300 shadow-xl">
+                <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
-                      <i className="fas fa-envelope text-deep-indigo"></i>
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                      <i className="fas fa-envelope text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-cream font-medium">Email</div>
-                      <div className="text-cream/80">sheetalghate.astrology@gmail.com</div>
+                      <div className="text-purple-800 font-semibold">Email</div>
+                      <div className="text-slate-700">sheetalghate.astrology@gmail.com</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
-                      <i className="fas fa-phone text-deep-indigo"></i>
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                      <i className="fas fa-phone text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-cream font-medium">Phone</div>
-                      <div className="text-cream/80">+91 XXXXXXXXXX</div>
+                      <div className="text-purple-800 font-semibold">Phone</div>
+                      <div className="text-slate-700">+91 XXXXXXXXXX</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
-                      <i className="fab fa-whatsapp text-deep-indigo"></i>
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                      <i className="fab fa-whatsapp text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-cream font-medium">WhatsApp</div>
-                      <div className="text-cream/80">Available for consultations</div>
+                      <div className="text-purple-800 font-semibold">WhatsApp</div>
+                      <div className="text-slate-700">Available for consultations</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
-                      <i className="fab fa-instagram text-deep-indigo"></i>
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                      <i className="fab fa-instagram text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-cream font-medium">Instagram</div>
-                      <div className="text-cream/80">@sheetalghate_astrology</div>
+                      <div className="text-purple-800 font-semibold">Instagram</div>
+                      <div className="text-slate-700">@sheetalghate_astrology</div>
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Spiritual Quote */}
-              <div className="bg-gradient-to-r from-warm-gold/20 to-copper/20 rounded-2xl p-8 border border-warm-gold/30 text-center">
-                <div className="text-6xl text-warm-gold mb-4">🕉</div>
-                <p className="text-lg font-devanagari text-cream mb-2">सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः</p>
-                <p className="text-cream/80 italic">May all beings be happy, may all beings be healthy</p>
+              {/* Spiritual Quote - LAST PANEL - Extra Bright! */}
+              <div className="bg-gradient-to-r from-purple-400 to-purple-500 rounded-2xl p-8 border-2 border-purple-300 text-center shadow-2xl">
+                <div className="text-6xl text-yellow-300 mb-4 animate-pulse">🕉</div>
+                <p className="text-lg font-devanagari text-white mb-2 font-semibold drop-shadow-lg">सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः</p>
+                <p className="text-purple-100 italic font-medium">May all beings be happy, may all beings be healthy</p>
                 <div className="mt-6">
-                  <p className="text-warm-gold font-playfair">Your spiritual journey begins with a single step</p>
+                  <p className="text-yellow-300 font-playfair text-lg font-semibold drop-shadow-lg">Your spiritual journey begins with a single step</p>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative overflow-hidden">
+      <section className="py-20 bg-white/95 backdrop-blur-sm relative overflow-hidden">
         {/* Spiritual decorative elements */}
         <div className="absolute top-10 left-10 text-warm-gold/10 text-8xl animate-float-slow">🪷</div>
         <div className="absolute bottom-20 right-20 text-warm-gold/10 text-6xl animate-float-medium">🕉</div>
@@ -60,10 +60,10 @@ export default function About() {
             
             {/* Bio Section */}
             <div>
-              <h2 className="text-4xl font-playfair font-bold text-cream mb-6">About Sheetal Ghate</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mb-8"></div>
+              <h2 className="text-4xl font-playfair font-bold text-purple-800 mb-6">About Sheetal Ghate</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-purple-600 mb-8"></div>
               
-              <div className="space-y-6 text-cream/90 text-lg leading-relaxed">
+              <div className="space-y-6 text-slate-700 text-lg leading-relaxed">
                 <p>
                   With over 15 years of dedicated practice in the ancient sciences of Vedic astrology and palmistry, Sheetal Ghate has become a trusted spiritual guide for thousands seeking divine clarity and cosmic alignment.
                 </p>
@@ -77,23 +77,23 @@ export default function About() {
               
               {/* Credentials */}
               <div className="mt-12">
-                <h3 className="text-2xl font-playfair font-semibold text-warm-gold mb-6">Spiritual Credentials</h3>
+                <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-6">Spiritual Credentials</h3>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
-                    <div className="text-2xl text-warm-gold mr-4">🔱</div>
-                    <span className="text-cream/90">Certified in KP & Nadi Astrology</span>
+                  <div className="flex items-center p-4 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg border-2 border-purple-300 shadow-lg">
+                    <div className="text-2xl text-purple-600 mr-4">🔱</div>
+                    <span className="text-slate-700 font-medium">Certified in KP & Nadi Astrology</span>
                   </div>
-                  <div className="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
-                    <div className="text-2xl text-warm-gold mr-4">🌺</div>
-                    <span className="text-cream/90">Trained in Palmistry from Kashi Gurukul</span>
+                  <div className="flex items-center p-4 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg border-2 border-purple-300 shadow-lg">
+                    <div className="text-2xl text-purple-600 mr-4">🌺</div>
+                    <span className="text-slate-700 font-medium">Trained in Palmistry from Kashi Gurukul</span>
                   </div>
-                  <div className="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
-                    <div className="text-2xl text-warm-gold mr-4">🔯</div>
-                    <span className="text-cream/90">Member – Indian Council of Occult Studies</span>
+                  <div className="flex items-center p-4 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg border-2 border-purple-300 shadow-lg">
+                    <div className="text-2xl text-purple-600 mr-4">🔯</div>
+                    <span className="text-slate-700 font-medium">Member – Indian Council of Occult Studies</span>
                   </div>
-                  <div className="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
-                    <div className="text-2xl text-warm-gold mr-4">📿</div>
-                    <span className="text-cream/90">Personalized readings with Vedic remedies</span>
+                  <div className="flex items-center p-4 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg border-2 border-purple-300 shadow-lg">
+                    <div className="text-2xl text-purple-600 mr-4">📿</div>
+                    <span className="text-slate-700 font-medium">Personalized readings with Vedic remedies</span>
                   </div>
                 </div>
               </div>
@@ -101,8 +101,8 @@ export default function About() {
           </div>
         </div>
         
-        {/* Testimonials Section */}
-        <div className="py-20 bg-gradient-to-r from-deep-indigo to-royal-purple/20">
+        {/* Testimonials Section - LAST PANEL - Extra Bright! */}
+        <div className="py-20 bg-gradient-to-r from-purple-400 to-purple-500 shadow-2xl">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <TestimonialsCarousel />
           </div>

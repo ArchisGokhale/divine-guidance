@@ -48,8 +48,8 @@ export default function Home() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden">
-        {/* Elegant background with proper contrast */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/70 via-purple-900/50 to-slate-900/70 backdrop-blur-sm">
+        {/* Bright purple background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-purple-400/30 to-purple-600/20 backdrop-blur-sm">
           {/* Sacred geometry patterns */}
           <div className="absolute top-20 right-10 w-96 h-96 opacity-15">
             <svg viewBox="0 0 200 200" className="w-full h-full animate-float">
@@ -91,17 +91,17 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-center">
             {/* Sanskrit Quote */}
             <div className="mb-8">
-              <p className="text-2xl sm:text-3xl font-devanagari text-warm-gold mb-2">"तत् त्वम् असि"</p>
-              <p className="text-lg sm:text-xl font-playfair italic text-cream/90">You are that divine self</p>
+              <p className="text-2xl sm:text-3xl font-devanagari text-yellow-300 mb-2 drop-shadow-lg">"तत् त्वम् असि"</p>
+              <p className="text-lg sm:text-xl font-playfair italic text-white/95 drop-shadow-md">You are that divine self</p>
             </div>
             
             {/* Hero Content */}
             <div className="mb-12">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-playfair font-bold text-cream mb-6">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 drop-shadow-xl">
                 Divine Guidance
-                <span className="block text-warm-gold">Awaits You</span>
+                <span className="block text-yellow-300">Awaits You</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-cream/80 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
                 Discover your spiritual path through ancient wisdom of Palmistry, Vedic Astrology, and Horoscope readings
               </p>
             </div>
@@ -109,13 +109,13 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/services">
-                <button className="px-8 py-4 border-2 border-warm-gold text-warm-gold font-bold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all duration-300 text-lg shadow-lg bg-deep-indigo/50 backdrop-blur-sm">
+                <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900 font-bold rounded-full hover:scale-105 transition-all duration-300 text-lg shadow-xl border-2 border-yellow-300">
                   <i className="fas fa-compass mr-2"></i>
                   Discover Your Spiritual Path
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="px-8 py-4 border-2 border-warm-gold text-warm-gold font-bold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all duration-300 text-lg shadow-lg bg-deep-indigo/50 backdrop-blur-sm">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 text-lg shadow-xl border-2 border-purple-400">
                   <i className="fas fa-calendar-plus mr-2"></i>
                   Schedule a Reading
                 </button>
@@ -134,49 +134,49 @@ export default function Home() {
         </div>
 
         {/* Service Cards Section */}
-        <div ref={servicesRef} className="relative pb-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-center text-cream mb-4">What Sheetal Offers</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-12"></div>
+        <div ref={servicesRef} className="relative pb-20 bg-white/95 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-center text-purple-800 mb-4">What Sheetal Offers</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mb-12"></div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {/* Palmistry Card */}
-              <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
-                    <i className="fas fa-hand-paper text-2xl text-deep-indigo"></i>
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:animate-bounce shadow-lg">
+                    <i className="fas fa-hand-paper text-2xl text-purple-900"></i>
                   </div>
-                  <h3 className="text-2xl font-playfair font-semibold text-cream mb-3">Palmistry</h3>
-                  <p className="text-sm font-devanagari text-warm-gold mb-4">हस्त रेखा</p>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-3">Palmistry</h3>
+                  <p className="text-sm font-devanagari text-purple-600 mb-4">हस्त रेखा</p>
+                  <p className="text-slate-700 leading-relaxed">
                     Unlock the secrets written in your palms. Ancient palm analysis reveals your life path, love destiny, and spiritual journey through sacred hand reading techniques.
                   </p>
                 </div>
               </div>
               
               {/* Vedic Astrology Card */}
-              <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
-                    <i className="fas fa-dharmachakra text-2xl text-deep-indigo"></i>
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:animate-bounce shadow-lg">
+                    <i className="fas fa-dharmachakra text-2xl text-purple-900"></i>
                   </div>
-                  <h3 className="text-2xl font-playfair font-semibold text-cream mb-3">Vedic Astrology</h3>
-                  <p className="text-sm font-devanagari text-warm-gold mb-4">ज्योतिष शास्त्र</p>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-3">Vedic Astrology</h3>
+                  <p className="text-sm font-devanagari text-purple-600 mb-4">ज्योतिष शास्त्र</p>
+                  <p className="text-slate-700 leading-relaxed">
                     Connect with cosmic energies through authentic Vedic astrology. Birth chart analysis, planetary positions, and karmic insights guide your spiritual evolution.
                   </p>
                 </div>
               </div>
               
               {/* Horoscope Card */}
-              <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
-                    <i className="fas fa-moon text-2xl text-deep-indigo"></i>
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:animate-bounce shadow-lg">
+                    <i className="fas fa-moon text-2xl text-purple-900"></i>
                   </div>
-                  <h3 className="text-2xl font-playfair font-semibold text-cream mb-3">Personal Horoscopes</h3>
-                  <p className="text-sm font-devanagari text-warm-gold mb-4">राशिफल</p>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-3">Personal Horoscopes</h3>
+                  <p className="text-sm font-devanagari text-purple-600 mb-4">राशिफल</p>
+                  <p className="text-slate-700 leading-relaxed">
                     Receive personalized cosmic guidance tailored to your unique energy. Daily predictions, spiritual remedies, and celestial timing for important decisions.
                   </p>
                 </div>
