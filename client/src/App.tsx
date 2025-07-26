@@ -10,6 +10,7 @@ import Services from "@/pages/Services";
 import Horoscope from "@/pages/Horoscope";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import StarfieldBackground from "@/components/StarfieldBackground";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <StarfieldBackground />
         <Toaster />
         <Router />
       </TooltipProvider>
