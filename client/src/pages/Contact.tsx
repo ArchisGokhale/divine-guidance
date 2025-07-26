@@ -63,7 +63,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-white/95 backdrop-blur-sm relative">
+      <section className="py-20 bg-purple-900/95 backdrop-blur-sm relative">
         {/* Spiritual background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 text-warm-gold/10 text-6xl animate-float-slow">🕉</div>
@@ -75,20 +75,20 @@ export default function Contact() {
         
         <div ref={contactRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-purple-800 mb-4">Book Your Divine Session</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-white mb-4">Book Your Divine Session</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Ready to embark on your spiritual journey? Connect with Sheetal for personalized cosmic guidance and divine insights.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
+            <div className="bg-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-yellow-400/50 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Full Name */}
                 <div>
-                  <Label htmlFor="fullName" className="text-slate-700 font-semibold">Full Name *</Label>
+                  <Label htmlFor="fullName" className="text-white font-semibold">Full Name *</Label>
                   <Input
                     id="fullName"
                     name="fullName"
@@ -96,14 +96,14 @@ export default function Contact() {
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
+                    className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 placeholder:text-purple-700 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium"
                     placeholder="Enter your full name"
                   />
                 </div>
                 
                 {/* Email */}
                 <div>
-                  <Label htmlFor="email" className="text-slate-700 font-semibold">Email Address *</Label>
+                  <Label htmlFor="email" className="text-white font-semibold">Email Address *</Label>
                   <Input
                     id="email"
                     name="email"
@@ -111,14 +111,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
+                    className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 placeholder:text-purple-700 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 
                 {/* WhatsApp Number */}
                 <div>
-                  <Label htmlFor="whatsapp" className="text-slate-700 font-semibold">WhatsApp Number *</Label>
+                  <Label htmlFor="whatsapp" className="text-white font-semibold">WhatsApp Number *</Label>
                   <Input
                     id="whatsapp"
                     name="whatsapp"
@@ -126,19 +126,19 @@ export default function Contact() {
                     required
                     value={formData.whatsapp}
                     onChange={handleInputChange}
-                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
+                    className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 placeholder:text-purple-700 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium"
                     placeholder="+91 9876543210"
                   />
                 </div>
                 
                 {/* Preferred Reading */}
                 <div>
-                  <Label className="text-slate-700 font-semibold">Preferred Reading *</Label>
+                  <Label className="text-white font-semibold">Preferred Reading *</Label>
                   <Select value={formData.service} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium">
+                    <SelectTrigger className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
-                    <SelectContent className="bg-white border-purple-300">
+                    <SelectContent className="bg-white border-yellow-400">
                       <SelectItem value="palmistry">Palm Reading (₹1,200)</SelectItem>
                       <SelectItem value="kundali">Kundali & Birth Chart (₹1,800)</SelectItem>
                       <SelectItem value="horoscope">Horoscope & Remedies (From ₹500)</SelectItem>
@@ -152,39 +152,39 @@ export default function Contact() {
                 {/* Preferred Date/Time */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="date" className="text-slate-700 font-semibold">Preferred Date</Label>
+                    <Label htmlFor="date" className="text-white font-semibold">Preferred Date</Label>
                     <Input
                       id="date"
                       name="date"
                       type="date"
                       value={formData.date}
                       onChange={handleInputChange}
-                      className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
+                      className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="time" className="text-slate-700 font-semibold">Preferred Time</Label>
+                    <Label htmlFor="time" className="text-white font-semibold">Preferred Time</Label>
                     <Input
                       id="time"
                       name="time"
                       type="time"
                       value={formData.time}
                       onChange={handleInputChange}
-                      className="mt-2 bg-white border-2 border-purple-300 text-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 font-medium"
+                      className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 font-medium"
                     />
                   </div>
                 </div>
                 
                 {/* Message */}
                 <div>
-                  <Label htmlFor="message" className="text-slate-700 font-semibold">Message / Questions</Label>
+                  <Label htmlFor="message" className="text-white font-semibold">Message / Questions</Label>
                   <Textarea
                     id="message"
                     name="message"
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="mt-2 bg-white border-2 border-purple-300 text-slate-800 placeholder:text-slate-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 resize-none font-medium"
+                    className="mt-2 bg-white border-2 border-yellow-400 text-purple-900 placeholder:text-purple-700 focus:border-yellow-300 focus:ring-2 focus:ring-yellow-200 resize-none font-medium"
                     placeholder="Share any specific questions or areas you'd like guidance on..."
                   />
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900 font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
                 >
                   <i className="fas fa-crystal-ball mr-2"></i>
                   Request My Divine Session
@@ -202,8 +202,8 @@ export default function Contact() {
             
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-8 border-2 border-purple-300 shadow-xl">
-                <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-6">Contact Information</h3>
+              <div className="bg-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-yellow-400/50 shadow-xl">
+                <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
@@ -211,8 +211,8 @@ export default function Contact() {
                       <i className="fas fa-envelope text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-purple-800 font-semibold">Email</div>
-                      <div className="text-slate-700">sheetalghate.astrology@gmail.com</div>
+                      <div className="text-white font-semibold">Email</div>
+                      <div className="text-gray-200">sheetalghate.astrology@gmail.com</div>
                     </div>
                   </div>
                   
@@ -221,8 +221,8 @@ export default function Contact() {
                       <i className="fas fa-phone text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-purple-800 font-semibold">Phone</div>
-                      <div className="text-slate-700">+91 XXXXXXXXXX</div>
+                      <div className="text-white font-semibold">Phone</div>
+                      <div className="text-gray-200">+91 XXXXXXXXXX</div>
                     </div>
                   </div>
                   
@@ -231,8 +231,8 @@ export default function Contact() {
                       <i className="fab fa-whatsapp text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-purple-800 font-semibold">WhatsApp</div>
-                      <div className="text-slate-700">Available for consultations</div>
+                      <div className="text-white font-semibold">WhatsApp</div>
+                      <div className="text-gray-200">Available for consultations</div>
                     </div>
                   </div>
                   
@@ -241,18 +241,18 @@ export default function Contact() {
                       <i className="fab fa-instagram text-purple-900"></i>
                     </div>
                     <div>
-                      <div className="text-purple-800 font-semibold">Instagram</div>
-                      <div className="text-slate-700">@sheetalghate_astrology</div>
+                      <div className="text-white font-semibold">Instagram</div>
+                      <div className="text-gray-200">@sheetalghate_astrology</div>
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Spiritual Quote - LAST PANEL - Extra Bright! */}
-              <div className="bg-gradient-to-r from-purple-400 to-purple-500 rounded-2xl p-8 border-2 border-purple-300 text-center shadow-2xl">
+              {/* Spiritual Quote - LAST PANEL */}
+              <div className="bg-gradient-to-br from-purple-900 to-purple-800 rounded-2xl p-8 border-2 border-yellow-400/50 text-center shadow-2xl">
                 <div className="text-6xl text-yellow-300 mb-4 animate-pulse">🕉</div>
                 <p className="text-lg font-devanagari text-white mb-2 font-semibold drop-shadow-lg">सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः</p>
-                <p className="text-purple-100 italic font-medium">May all beings be happy, may all beings be healthy</p>
+                <p className="text-gray-200 italic font-medium">May all beings be happy, may all beings be healthy</p>
                 <div className="mt-6">
                   <p className="text-yellow-300 font-playfair text-lg font-semibold drop-shadow-lg">Your spiritual journey begins with a single step</p>
                 </div>

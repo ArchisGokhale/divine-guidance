@@ -47,7 +47,7 @@ export default function Services() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-white/95 backdrop-blur-sm relative overflow-hidden">
+      <section className="py-20 bg-purple-900/95 backdrop-blur-sm relative overflow-hidden">
         {/* Spiritual background elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-20 text-warm-gold/10 text-7xl animate-float-slow">🕉</div>
@@ -59,9 +59,9 @@ export default function Services() {
         
         <div ref={servicesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-purple-800 mb-4">Sacred Services</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-white mb-4">Sacred Services</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Choose from our comprehensive range of spiritual guidance services, each designed to illuminate your path and align you with cosmic energies.
             </p>
           </div>
@@ -72,22 +72,22 @@ export default function Services() {
                 key={index}
                 className={`backdrop-blur-sm rounded-2xl p-8 border hover:shadow-2xl transition-all duration-500 hover:scale-105 group ${
                   service.featured 
-                    ? "bg-gradient-to-br from-yellow-200 to-yellow-300 border-2 border-yellow-400 shadow-xl" 
-                    : "bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 hover:border-purple-400 shadow-lg"
+                    ? "bg-gradient-to-br from-yellow-400/20 to-yellow-500/20 border-2 border-yellow-400 shadow-xl" 
+                    : "bg-gradient-to-br from-purple-800 to-purple-700 border-2 border-yellow-400/50 hover:border-yellow-400 shadow-lg"
                 }`}
               >
                 <div className="text-center">
                   <div className="text-4xl mb-4">{service.emoji}</div>
-                  <h3 className="text-2xl font-playfair font-semibold text-purple-800 mb-2">{service.title}</h3>
-                  <div className="text-3xl font-bold text-purple-600 mb-4">{service.price}</div>
-                  <p className="text-slate-700 leading-relaxed mb-6">
+                  <h3 className="text-2xl font-playfair font-semibold text-white mb-2">{service.title}</h3>
+                  <div className="text-3xl font-bold text-yellow-300 mb-4">{service.price}</div>
+                  <p className="text-gray-200 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <Link href="/contact">
                     <button className={`w-full px-6 py-3 font-semibold rounded-lg hover:shadow-lg transition-all duration-300 ${
                       service.featured 
-                        ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white animate-pulse" 
-                        : "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
+                        ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900 animate-pulse" 
+                        : "bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900"
                     }`}>
                       {service.featured ? "Book Premium Session" : "Book Session"}
                     </button>
@@ -98,8 +98,8 @@ export default function Services() {
           </div>
         </div>
         
-        {/* Spiritual Progress Tracker Section - LAST PANEL - Extra Bright! */}
-        <div className="py-20 bg-gradient-to-r from-purple-400 to-purple-500 shadow-2xl">
+        {/* Spiritual Progress Tracker Section - LAST PANEL */}
+        <div className="py-20 bg-gradient-to-br from-purple-900 to-purple-800 shadow-2xl">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <SpiritualProgressTracker />
           </div>
