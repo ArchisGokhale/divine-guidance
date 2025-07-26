@@ -90,13 +90,13 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/services">
-                <button className="px-8 py-4 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg animate-glow">
-                  <i className="fas fa-compass mr-2"></i>
-                  Discover Your Spiritual Path
+                <button className="px-8 py-4 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg shadow-lg border-2 border-transparent hover:from-copper hover:to-warm-gold">
+                  <i className="fas fa-compass mr-2 text-deep-indigo"></i>
+                  <span className="text-deep-indigo">Discover Your Spiritual Path</span>
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="px-8 py-4 border-2 border-warm-gold text-warm-gold font-semibold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all duration-300 text-lg">
+                <button className="px-8 py-4 border-2 border-warm-gold text-warm-gold font-bold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all duration-300 text-lg shadow-lg bg-deep-indigo/50 backdrop-blur-sm">
                   <i className="fas fa-calendar-plus mr-2"></i>
                   Schedule a Reading
                 </button>
@@ -188,10 +188,10 @@ export default function Home() {
                   />
                   <Button
                     onClick={calculateSpiritualNumber}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 shadow-lg border-2 border-transparent"
                   >
-                    <i className="fas fa-calculator mr-2"></i>
-                    Calculate My Spiritual Number
+                    <i className="fas fa-calculator mr-2 text-deep-indigo"></i>
+                    <span className="text-deep-indigo">Calculate My Spiritual Number</span>
                   </Button>
                 </div>
                 
