@@ -140,7 +140,7 @@ export default function SpiritualProgressTracker() {
             </Button>
             <Button
               onClick={stopMeditation}
-              className="px-6 py-2 border-2 border-warm-gold text-warm-gold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all"
+              className="px-6 py-2 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:from-copper hover:to-warm-gold transform hover:scale-105 transition-all duration-300 shadow-lg"
             >
               <i className="fas fa-stop mr-2"></i>
               Stop
