@@ -112,7 +112,7 @@ export default function Horoscope() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative overflow-hidden">
+      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative overflow-hidden">
         {/* Celestial background elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-16 text-warm-gold/10 text-6xl animate-float-slow">♈</div>

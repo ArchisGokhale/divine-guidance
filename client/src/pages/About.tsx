@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative overflow-hidden">
+      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative overflow-hidden">
         {/* Spiritual decorative elements */}
         <div className="absolute top-10 left-10 text-warm-gold/10 text-8xl animate-float-slow">🪷</div>
         <div className="absolute bottom-20 right-20 text-warm-gold/10 text-6xl animate-float-medium">🕉</div>

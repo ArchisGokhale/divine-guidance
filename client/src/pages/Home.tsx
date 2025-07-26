@@ -48,8 +48,8 @@ export default function Home() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden">
-        {/* Traditional spiritual background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-royal-purple to-deep-indigo">
+        {/* Elegant background with proper contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/70 via-purple-900/50 to-slate-900/70 backdrop-blur-sm">
           {/* Sacred geometry patterns */}
           <div className="absolute top-20 right-10 w-96 h-96 opacity-15">
             <svg viewBox="0 0 200 200" className="w-full h-full animate-float">

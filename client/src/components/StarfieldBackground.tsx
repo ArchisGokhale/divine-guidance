@@ -19,47 +19,47 @@ export default function StarfieldBackground() {
     const generateParticles = () => {
       const particleArray: Particle[] = [];
       
-      // Bright visible stars
-      for (let i = 0; i < 80; i++) {
+      // Subtle twinkling stars
+      for (let i = 0; i < 40; i++) {
         particleArray.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          vx: (Math.random() - 0.5) * 0.02,
-          vy: (Math.random() - 0.5) * 0.02,
-          size: Math.random() * 3 + 2,
-          color: Math.random() > 0.6 ? '#FFD700' : '#FFFFFF',
-          opacity: Math.random() * 0.6 + 0.4,
+          vx: (Math.random() - 0.5) * 0.01,
+          vy: (Math.random() - 0.5) * 0.01,
+          size: Math.random() * 2 + 1,
+          color: Math.random() > 0.7 ? '#FFD700' : '#FFFFFF',
+          opacity: Math.random() * 0.3 + 0.2,
           type: 'star'
         });
       }
 
-      // Purple energy orbs
-      for (let i = 80; i < 100; i++) {
+      // Subtle purple energy orbs
+      for (let i = 40; i < 50; i++) {
         particleArray.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          vx: (Math.random() - 0.5) * 0.03,
-          vy: (Math.random() - 0.5) * 0.03,
-          size: Math.random() * 6 + 4,
+          vx: (Math.random() - 0.5) * 0.015,
+          vy: (Math.random() - 0.5) * 0.015,
+          size: Math.random() * 4 + 2,
           color: Math.random() > 0.5 ? '#9333EA' : '#7C3AED',
-          opacity: Math.random() * 0.4 + 0.3,
+          opacity: Math.random() * 0.15 + 0.1,
           type: 'orb'
         });
       }
 
-      // Golden streaks
-      for (let i = 100; i < 110; i++) {
+      // Subtle golden streaks
+      for (let i = 50; i < 55; i++) {
         particleArray.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          vx: Math.random() * 0.1 + 0.05,
-          vy: (Math.random() - 0.5) * 0.02,
-          size: Math.random() * 40 + 20,
+          vx: Math.random() * 0.05 + 0.02,
+          vy: (Math.random() - 0.5) * 0.01,
+          size: Math.random() * 20 + 10,
           color: '#FFD700',
-          opacity: Math.random() * 0.3 + 0.2,
+          opacity: Math.random() * 0.15 + 0.05,
           type: 'streak'
         });
       }
@@ -83,28 +83,17 @@ export default function StarfieldBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-purple-950">
+    <div className="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-purple-900/50">
       
-      {/* Animated geometric grid */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Subtle geometric pattern */}
+      <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full">
           <defs>
-            <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-              <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#FFD700" strokeWidth="0.2" opacity="0.3"/>
+            <pattern id="grid" width="150" height="150" patternUnits="userSpaceOnUse">
+              <path d="M 150 0 L 0 0 0 150" fill="none" stroke="#FFD700" strokeWidth="0.5" opacity="0.2"/>
             </pattern>
-            <linearGradient id="pulse-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#FFD700" stopOpacity="0.8"/>
-              <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
-              <stop offset="100%" stopColor="#FFD700" stopOpacity="0.4"/>
-            </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
-          
-          {/* Pulsing energy lines */}
-          <g className="animate-pulse" style={{ animationDuration: '4s' }}>
-            <path d="M0,20 Q25,10 50,20 T100,20" stroke="url(#pulse-gradient)" strokeWidth="1" fill="none" opacity="0.4"/>
-            <path d="M0,80 Q25,70 50,80 T100,80" stroke="url(#pulse-gradient)" strokeWidth="1" fill="none" opacity="0.3"/>
-          </g>
         </svg>
       </div>
 
@@ -170,35 +159,15 @@ export default function StarfieldBackground() {
         return null;
       })}
 
-      {/* Futuristic overlay effects */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Very subtle overlay effects */}
+      <div className="absolute inset-0 opacity-5">
         <div 
           className="absolute top-0 left-0 w-full h-full"
           style={{
             background: `
-              radial-gradient(ellipse at 10% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
-              radial-gradient(ellipse at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 70%)
+              radial-gradient(ellipse at 20% 30%, rgba(147, 51, 234, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 70%, rgba(255, 215, 0, 0.03) 0%, transparent 60%)
             `
-          }}
-        />
-      </div>
-
-      {/* Scanning lines effect */}
-      <div className="absolute inset-0 opacity-10">
-        <div 
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent animate-pulse"
-          style={{ 
-            top: '20%',
-            animationDuration: '3s'
-          }}
-        />
-        <div 
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"
-          style={{ 
-            top: '60%',
-            animationDuration: '4s',
-            animationDelay: '1s'
           }}
         />
       </div>

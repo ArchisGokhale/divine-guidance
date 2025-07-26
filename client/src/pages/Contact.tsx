@@ -63,7 +63,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-deep-indigo relative">
+      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative">
         {/* Spiritual background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 text-warm-gold/10 text-6xl animate-float-slow">🕉</div>

@@ -47,7 +47,7 @@ export default function Services() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-deep-indigo relative overflow-hidden">
+      <section className="py-20 bg-slate-800/60 backdrop-blur-sm relative overflow-hidden">
         {/* Spiritual background elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-20 text-warm-gold/10 text-7xl animate-float-slow">🕉</div>
