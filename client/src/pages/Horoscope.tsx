@@ -112,7 +112,16 @@ export default function Horoscope() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative">
+      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative overflow-hidden">
+        {/* Celestial background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 right-16 text-warm-gold/10 text-6xl animate-float-slow">♈</div>
+          <div className="absolute bottom-32 left-16 text-warm-gold/10 text-6xl animate-float-medium">♌</div>
+          <div className="absolute top-1/3 left-20 text-warm-gold/10 text-5xl animate-float" style={{animationDelay: '1s'}}>♐</div>
+          <div className="absolute bottom-1/4 right-1/4 text-warm-gold/10 text-4xl animate-float-slow" style={{animationDelay: '0.5s'}}>🌙</div>
+          <div className="absolute top-2/3 right-12 text-warm-gold/10 text-3xl animate-float" style={{animationDelay: '2s'}}>⭐</div>
+          <div className="absolute top-1/4 left-1/2 text-warm-gold/10 text-4xl animate-float-medium" style={{animationDelay: '1.5s'}}>🕉</div>
+        </div>
         <div ref={horoscopeRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-cream mb-4">Daily Horoscope</h2>

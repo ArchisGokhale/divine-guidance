@@ -65,12 +65,12 @@ export default function Contact() {
     <div className="pt-20">
       <section className="py-20 bg-deep-indigo relative">
         {/* Spiritual background elements */}
-        <div className="absolute bottom-10 right-10 w-48 h-48 opacity-10">
-          <img 
-            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" 
-            alt="Spiritual mandala" 
-            className="w-full h-full object-contain animate-float" 
-          />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 text-warm-gold/10 text-6xl animate-float-slow">🕉</div>
+          <div className="absolute bottom-20 right-20 text-warm-gold/10 text-8xl animate-float-medium">🪷</div>
+          <div className="absolute top-1/2 right-10 text-warm-gold/10 text-4xl animate-float">🌙</div>
+          <div className="absolute bottom-1/3 left-1/4 text-warm-gold/10 text-3xl animate-float" style={{animationDelay: '1.5s'}}>⭐</div>
+          <div className="absolute top-1/4 left-1/2 text-warm-gold/10 text-2xl animate-float-slow" style={{animationDelay: '2s'}}>✨</div>
         </div>
         
         <div ref={contactRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

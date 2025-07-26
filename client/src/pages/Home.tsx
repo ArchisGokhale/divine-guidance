@@ -48,23 +48,42 @@ export default function Home() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden">
-        {/* Traditional Indian celestial artwork background */}
+        {/* Traditional spiritual background */}
         <div className="absolute inset-0 bg-gradient-to-br from-deep-indigo via-royal-purple to-deep-indigo">
-          {/* Decorative mandala background */}
-          <div className="absolute top-20 right-10 w-96 h-96 opacity-10">
-            <img 
-              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
-              alt="Spiritual mandala design" 
-              className="w-full h-full object-contain animate-float" 
-            />
+          {/* Sacred geometry patterns */}
+          <div className="absolute top-20 right-10 w-96 h-96 opacity-15">
+            <svg viewBox="0 0 200 200" className="w-full h-full animate-float">
+              <defs>
+                <radialGradient id="mandala-gradient" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.3"/>
+                  <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.1"/>
+                </radialGradient>
+              </defs>
+              <circle cx="100" cy="100" r="90" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.3"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.4"/>
+              <circle cx="100" cy="100" r="50" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.5"/>
+              <circle cx="100" cy="100" r="30" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.6"/>
+              <circle cx="100" cy="100" r="10" fill="#F59E0B" opacity="0.3"/>
+              {/* Petal patterns */}
+              {Array.from({length: 8}).map((_, i) => (
+                <g key={i} transform={`rotate(${i * 45} 100 100)`}>
+                  <ellipse cx="100" cy="60" rx="8" ry="20" fill="#F59E0B" opacity="0.2"/>
+                </g>
+              ))}
+            </svg>
           </div>
           {/* Celestial elements */}
           <div className="absolute bottom-20 left-10 w-64 h-64 opacity-20">
-            <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-              alt="Celestial moon and stars" 
-              className="w-full h-full object-contain" 
-            />
+            <svg viewBox="0 0 200 200" className="w-full h-full">
+              <circle cx="80" cy="80" r="25" fill="#F59E0B" opacity="0.2"/>
+              <circle cx="80" cy="80" r="20" fill="none" stroke="#F59E0B" strokeWidth="1" opacity="0.3"/>
+              <path d="M 55 80 L 75 70 L 85 50 L 95 70 L 115 80 L 95 90 L 85 110 L 75 90 Z" fill="#F59E0B" opacity="0.3"/>
+              {/* Stars */}
+              <circle cx="150" cy="50" r="2" fill="#F59E0B" opacity="0.6"/>
+              <circle cx="170" cy="90" r="1.5" fill="#F59E0B" opacity="0.5"/>
+              <circle cx="40" cy="150" r="1" fill="#F59E0B" opacity="0.4"/>
+              <circle cx="180" cy="160" r="2.5" fill="#F59E0B" opacity="0.7"/>
+            </svg>
           </div>
         </div>
         

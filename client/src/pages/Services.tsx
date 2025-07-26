@@ -47,14 +47,14 @@ export default function Services() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-deep-indigo relative">
-        {/* Vedic symbols background */}
-        <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
-          <img 
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-            alt="Vedic astrology symbols" 
-            className="w-full h-full object-contain" 
-          />
+      <section className="py-20 bg-deep-indigo relative overflow-hidden">
+        {/* Spiritual background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 right-20 text-warm-gold/10 text-7xl animate-float-slow">🕉</div>
+          <div className="absolute bottom-32 left-20 text-warm-gold/10 text-6xl animate-float-medium">🪷</div>
+          <div className="absolute top-1/3 left-10 text-warm-gold/10 text-5xl animate-float" style={{animationDelay: '1s'}}>🌙</div>
+          <div className="absolute bottom-1/4 right-1/3 text-warm-gold/10 text-4xl animate-float-slow" style={{animationDelay: '0.5s'}}>⭐</div>
+          <div className="absolute top-2/3 right-10 text-warm-gold/10 text-3xl animate-float" style={{animationDelay: '2s'}}>✨</div>
         </div>
         
         <div ref={servicesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

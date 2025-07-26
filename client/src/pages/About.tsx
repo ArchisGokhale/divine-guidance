@@ -6,15 +6,11 @@ export default function About() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative">
-        {/* Lotus decoration */}
-        <div className="absolute top-10 left-10 w-32 h-32 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-            alt="Spiritual lotus flower" 
-            className="w-full h-full object-contain" 
-          />
-        </div>
+      <section className="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative overflow-hidden">
+        {/* Spiritual decorative elements */}
+        <div className="absolute top-10 left-10 text-warm-gold/10 text-8xl animate-float-slow">🪷</div>
+        <div className="absolute bottom-20 right-20 text-warm-gold/10 text-6xl animate-float-medium">🕉</div>
+        <div className="absolute top-1/2 right-10 text-warm-gold/10 text-4xl animate-float">✨</div>
         
         <div ref={aboutRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
