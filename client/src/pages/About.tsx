@@ -24,7 +24,7 @@ export default function About() {
                 {/* Sheetal's image */}
                 <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-warm-gold/50 shadow-2xl">
                   <img 
-                    src="/attached_assets/anaya aai jpeg_1753544728493.jpg" 
+                    src="/sheetal-profile.jpg" 
                     alt="Sheetal Ghate - Spiritual Guide and Astrologer"
                     className="w-full h-full object-cover"
                   />
