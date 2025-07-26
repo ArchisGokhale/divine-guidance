@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 export default function About() {
   const aboutRef = useScrollAnimation();
@@ -20,14 +21,42 @@ export default function About() {
             {/* Image Section */}
             <div className="text-center lg:text-left">
               <div className="relative inline-block">
-                {/* Placeholder for Sheetal's image */}
-                <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-warm-gold/20 to-copper/20 border-4 border-warm-gold/50 flex items-center justify-center">
-                  <i className="fas fa-user text-6xl text-warm-gold"></i>
+                {/* Sheetal's image */}
+                <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-warm-gold/50 shadow-2xl">
+                  <img 
+                    src="/attached_assets/anaya aai jpeg_1753544728493.jpg" 
+                    alt="Sheetal Ghate - Spiritual Guide and Astrologer"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center animate-glow">
                   <i className="fas fa-om text-xl text-deep-indigo"></i>
                 </div>
               </div>
+              
+              {/* Interactive Chakra Visualization */}
+              <div className="mt-8">
+                <h3 className="text-xl font-playfair font-semibold text-warm-gold mb-4">Spiritual Energy Centers</h3>
+                <div className="flex justify-center space-x-2">
+                  {[
+                    { name: "Crown", color: "bg-purple-500", tooltip: "Connection to Divine" },
+                    { name: "Third Eye", color: "bg-indigo-500", tooltip: "Intuition & Wisdom" },
+                    { name: "Throat", color: "bg-blue-500", tooltip: "Communication & Truth" },
+                    { name: "Heart", color: "bg-green-500", tooltip: "Love & Compassion" },
+                    { name: "Solar", color: "bg-yellow-500", tooltip: "Personal Power" },
+                    { name: "Sacral", color: "bg-orange-500", tooltip: "Creativity & Emotion" },
+                    { name: "Root", color: "bg-red-500", tooltip: "Grounding & Stability" }
+                  ].map((chakra, index) => (
+                    <div key={index} className="group relative">
+                      <div className={`w-8 h-8 rounded-full ${chakra.color} animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer`}></div>
+                      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-deep-indigo/90 text-cream text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                        {chakra.tooltip}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
               <div className="mt-8 text-center">
                 <p className="text-xl font-playfair italic text-warm-gold">"My goal is to align your inner soul with the cosmic rhythm."</p>
               </div>
@@ -73,6 +102,13 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Testimonials Section */}
+        <div className="py-20 bg-gradient-to-r from-deep-indigo to-royal-purple/20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <TestimonialsCarousel />
           </div>
         </div>
       </section>

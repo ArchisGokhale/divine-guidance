@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import SpiritualProgressTracker from "@/components/SpiritualProgressTracker";
 
 export default function Services() {
   const servicesRef = useScrollAnimation();
@@ -94,6 +95,13 @@ export default function Services() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        
+        {/* Spiritual Progress Tracker Section */}
+        <div className="py-20 bg-gradient-to-r from-royal-purple/30 to-deep-indigo/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SpiritualProgressTracker />
           </div>
         </div>
       </section>

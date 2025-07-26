@@ -1,9 +1,48 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Home() {
   const heroRef = useScrollAnimation();
   const servicesRef = useScrollAnimation();
+  const calculatorRef = useScrollAnimation();
+  
+  const [birthDate, setBirthDate] = useState("");
+  const [spiritualInsight, setSpiritualInsight] = useState<any>(null);
+
+  const calculateSpiritualNumber = () => {
+    if (!birthDate) return;
+    
+    const date = new Date(birthDate);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    
+    // Calculate life path number
+    const sum = day + month + year.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+    const lifePathNumber = sum.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+    const finalNumber = lifePathNumber > 9 ? lifePathNumber.toString().split('').reduce((a, b) => a + parseInt(b), 0) : lifePathNumber;
+    
+    const insights = {
+      1: { planet: "Sun", color: "Gold", trait: "Natural Leader", mantra: "ॐ सूर्याय नमः" },
+      2: { planet: "Moon", color: "Silver", trait: "Intuitive Healer", mantra: "ॐ सोमाय नमः" },
+      3: { planet: "Jupiter", color: "Yellow", trait: "Creative Communicator", mantra: "ॐ गुरवे नमः" },
+      4: { planet: "Uranus", color: "Blue", trait: "Practical Builder", mantra: "ॐ राहवे नमः" },
+      5: { planet: "Mercury", color: "Green", trait: "Free Spirit", mantra: "ॐ बुधाय नमः" },
+      6: { planet: "Venus", color: "Pink", trait: "Nurturing Soul", mantra: "ॐ शुक्राय नमः" },
+      7: { planet: "Neptune", color: "Purple", trait: "Mystic Seeker", mantra: "ॐ केतवे नमः" },
+      8: { planet: "Saturn", color: "Black", trait: "Karmic Teacher", mantra: "ॐ शनैश्चराय नमः" },
+      9: { planet: "Mars", color: "Red", trait: "Spiritual Warrior", mantra: "ॐ मंगलाय नमः" }
+    };
+    
+    setSpiritualInsight({
+      number: finalNumber,
+      ...insights[finalNumber as keyof typeof insights]
+    });
+  };
 
   return (
     <div className="pt-20">
@@ -66,6 +105,15 @@ export default function Home() {
           </div>
         </div>
         
+        {/* Floating Spiritual Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-10 text-warm-gold/20 text-4xl animate-float" style={{animationDelay: '0s'}}>🕉</div>
+          <div className="absolute top-1/3 right-20 text-warm-gold/20 text-3xl animate-float" style={{animationDelay: '1s'}}>🪷</div>
+          <div className="absolute bottom-1/4 left-1/4 text-warm-gold/20 text-2xl animate-float" style={{animationDelay: '2s'}}>⭐</div>
+          <div className="absolute bottom-1/3 right-1/3 text-warm-gold/20 text-3xl animate-float" style={{animationDelay: '3s'}}>🌙</div>
+          <div className="absolute top-1/2 left-1/2 text-warm-gold/20 text-2xl animate-float" style={{animationDelay: '4s'}}>✨</div>
+        </div>
+
         {/* Service Cards Section */}
         <div ref={servicesRef} className="relative pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,6 +160,61 @@ export default function Home() {
                   <p className="text-cream/80 leading-relaxed">
                     Receive personalized cosmic guidance tailored to your unique energy. Daily predictions, spiritual remedies, and celestial timing for important decisions.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Cosmic Birthday Calculator */}
+        <div ref={calculatorRef} className="relative py-20 bg-gradient-to-r from-royal-purple/30 to-deep-indigo/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-cream mb-4">Discover Your Spiritual Number</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
+              <p className="text-lg text-cream/80">Enter your birth date to reveal your cosmic influence and spiritual path</p>
+            </div>
+            
+            <div className="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <Label htmlFor="birthDate" className="text-cream font-medium mb-2 block text-lg">Your Birth Date</Label>
+                  <Input
+                    id="birthDate"
+                    type="date"
+                    value={birthDate}
+                    onChange={(e) => setBirthDate(e.target.value)}
+                    className="mb-4 bg-deep-indigo/50 border-warm-gold/30 text-cream focus:border-warm-gold"
+                  />
+                  <Button
+                    onClick={calculateSpiritualNumber}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  >
+                    <i className="fas fa-calculator mr-2"></i>
+                    Calculate My Spiritual Number
+                  </Button>
+                </div>
+                
+                <div className="text-center">
+                  {spiritualInsight ? (
+                    <div className="space-y-4">
+                      <div className="text-6xl font-bold text-warm-gold animate-glow">{spiritualInsight.number}</div>
+                      <div className="space-y-2">
+                        <p className="text-xl font-playfair text-cream">Ruling Planet: <span className="text-warm-gold">{spiritualInsight.planet}</span></p>
+                        <p className="text-lg text-cream/90">Lucky Color: <span className="text-warm-gold">{spiritualInsight.color}</span></p>
+                        <p className="text-lg text-cream/90">Soul Trait: <span className="text-warm-gold">{spiritualInsight.trait}</span></p>
+                        <div className="mt-4 p-4 bg-deep-indigo/30 rounded-lg">
+                          <p className="text-sm text-cream/70 mb-1">Your Personal Mantra</p>
+                          <p className="text-lg font-devanagari text-warm-gold">{spiritualInsight.mantra}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      <div className="text-6xl text-warm-gold/50">?</div>
+                      <p className="text-cream/70">Enter your birth date to discover your spiritual essence</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
