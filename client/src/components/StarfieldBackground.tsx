@@ -1,127 +1,207 @@
 import { useEffect, useState } from 'react';
 
-interface Star {
+interface Particle {
   id: number;
   x: number;
   y: number;
+  vx: number;
+  vy: number;
   size: number;
+  color: string;
   opacity: number;
-  twinkleDelay: number;
-}
-
-interface ShootingStar {
-  id: number;
-  x: number;
-  y: number;
-  length: number;
-  delay: number;
+  type: 'star' | 'orb' | 'streak';
 }
 
 export default function StarfieldBackground() {
-  const [stars, setStars] = useState<Star[]>([]);
-  const [shootingStars, setShootingStars] = useState<ShootingStar[]>([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    // Generate static twinkling stars
-    const generateStars = () => {
-      const starArray: Star[] = [];
-      for (let i = 0; i < 150; i++) {
-        starArray.push({
+    const generateParticles = () => {
+      const particleArray: Particle[] = [];
+      
+      // Bright visible stars
+      for (let i = 0; i < 80; i++) {
+        particleArray.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-          twinkleDelay: Math.random() * 3
+          vx: (Math.random() - 0.5) * 0.02,
+          vy: (Math.random() - 0.5) * 0.02,
+          size: Math.random() * 3 + 2,
+          color: Math.random() > 0.6 ? '#FFD700' : '#FFFFFF',
+          opacity: Math.random() * 0.6 + 0.4,
+          type: 'star'
         });
       }
-      setStars(starArray);
-    };
 
-    // Generate shooting stars
-    const generateShootingStars = () => {
-      const shootingStarArray: ShootingStar[] = [];
-      for (let i = 0; i < 3; i++) {
-        shootingStarArray.push({
+      // Purple energy orbs
+      for (let i = 80; i < 100; i++) {
+        particleArray.push({
           id: i,
           x: Math.random() * 100,
-          y: Math.random() * 50 + 10,
-          length: Math.random() * 80 + 60,
-          delay: Math.random() * 8 + 2
+          y: Math.random() * 100,
+          vx: (Math.random() - 0.5) * 0.03,
+          vy: (Math.random() - 0.5) * 0.03,
+          size: Math.random() * 6 + 4,
+          color: Math.random() > 0.5 ? '#9333EA' : '#7C3AED',
+          opacity: Math.random() * 0.4 + 0.3,
+          type: 'orb'
         });
       }
-      setShootingStars(shootingStarArray);
+
+      // Golden streaks
+      for (let i = 100; i < 110; i++) {
+        particleArray.push({
+          id: i,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          vx: Math.random() * 0.1 + 0.05,
+          vy: (Math.random() - 0.5) * 0.02,
+          size: Math.random() * 40 + 20,
+          color: '#FFD700',
+          opacity: Math.random() * 0.3 + 0.2,
+          type: 'streak'
+        });
+      }
+
+      setParticles(particleArray);
     };
 
-    generateStars();
-    generateShootingStars();
+    generateParticles();
+
+    // Animate particles
+    const animateParticles = () => {
+      setParticles(prev => prev.map(particle => ({
+        ...particle,
+        x: (particle.x + particle.vx + 100) % 100,
+        y: (particle.y + particle.vy + 100) % 100,
+      })));
+    };
+
+    const interval = setInterval(animateParticles, 50);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="starfield">
-      {/* Twinkling Stars */}
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="star"
+    <div className="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-purple-950">
+      
+      {/* Animated geometric grid */}
+      <div className="absolute inset-0 opacity-20">
+        <svg className="w-full h-full">
+          <defs>
+            <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+              <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#FFD700" strokeWidth="0.2" opacity="0.3"/>
+            </pattern>
+            <linearGradient id="pulse-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#FFD700" stopOpacity="0.8"/>
+              <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
+              <stop offset="100%" stopColor="#FFD700" stopOpacity="0.4"/>
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+          
+          {/* Pulsing energy lines */}
+          <g className="animate-pulse" style={{ animationDuration: '4s' }}>
+            <path d="M0,20 Q25,10 50,20 T100,20" stroke="url(#pulse-gradient)" strokeWidth="1" fill="none" opacity="0.4"/>
+            <path d="M0,80 Q25,70 50,80 T100,80" stroke="url(#pulse-gradient)" strokeWidth="1" fill="none" opacity="0.3"/>
+          </g>
+        </svg>
+      </div>
+
+      {/* Particles */}
+      {particles.map((particle) => {
+        if (particle.type === 'star') {
+          return (
+            <div
+              key={particle.id}
+              className="absolute animate-pulse"
+              style={{
+                left: `${particle.x}%`,
+                top: `${particle.y}%`,
+                width: `${particle.size}px`,
+                height: `${particle.size}px`,
+                background: `radial-gradient(circle, ${particle.color} 0%, transparent 70%)`,
+                opacity: particle.opacity,
+                borderRadius: '50%',
+                boxShadow: `0 0 ${particle.size * 2}px ${particle.color}`,
+                animationDuration: `${2 + Math.random() * 2}s`
+              }}
+            />
+          );
+        }
+
+        if (particle.type === 'orb') {
+          return (
+            <div
+              key={particle.id}
+              className="absolute animate-ping"
+              style={{
+                left: `${particle.x}%`,
+                top: `${particle.y}%`,
+                width: `${particle.size}px`,
+                height: `${particle.size}px`,
+                background: `radial-gradient(circle, ${particle.color} 0%, transparent 60%)`,
+                opacity: particle.opacity,
+                borderRadius: '50%',
+                animationDuration: `${3 + Math.random() * 3}s`
+              }}
+            />
+          );
+        }
+
+        if (particle.type === 'streak') {
+          return (
+            <div
+              key={particle.id}
+              className="absolute"
+              style={{
+                left: `${particle.x}%`,
+                top: `${particle.y}%`,
+                width: `${particle.size}px`,
+                height: '2px',
+                background: `linear-gradient(90deg, transparent, ${particle.color}, transparent)`,
+                opacity: particle.opacity,
+                borderRadius: '1px'
+              }}
+            />
+          );
+        }
+
+        return null;
+      })}
+
+      {/* Futuristic overlay effects */}
+      <div className="absolute inset-0 opacity-30">
+        <div 
+          className="absolute top-0 left-0 w-full h-full"
           style={{
-            left: `${star.x}%`,
-            top: `${star.y}%`,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            opacity: star.opacity,
-            animationDelay: `${star.twinkleDelay}s`,
-            background: `radial-gradient(circle, rgba(245, 158, 11, ${star.opacity}) 0%, rgba(255, 255, 255, ${star.opacity * 0.8}) 100%)`
+            background: `
+              radial-gradient(ellipse at 10% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 70%)
+            `
           }}
         />
-      ))}
+      </div>
 
-      {/* Shooting Stars */}
-      {shootingStars.map((shootingStar) => (
-        <div
-          key={`shooting-${shootingStar.id}`}
-          className="shooting-star"
-          style={{
-            left: `${shootingStar.x}%`,
-            top: `${shootingStar.y}%`,
-            width: `${shootingStar.length}px`,
-            animationDelay: `${shootingStar.delay}s`,
-            background: 'linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.8), rgba(255, 255, 255, 0.6), transparent)'
+      {/* Scanning lines effect */}
+      <div className="absolute inset-0 opacity-10">
+        <div 
+          className="absolute w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent animate-pulse"
+          style={{ 
+            top: '20%',
+            animationDuration: '3s'
           }}
         />
-      ))}
-
-      {/* Constellation Lines (subtle) */}
-      <svg className="absolute inset-0 w-full h-full opacity-10">
-        <defs>
-          <linearGradient id="constellation-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.3"/>
-            <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.1"/>
-          </linearGradient>
-        </defs>
-        
-        {/* Big Dipper constellation */}
-        <g stroke="url(#constellation-gradient)" strokeWidth="0.5" fill="none">
-          <path d="M 20 30 L 25 25 L 35 28 L 45 30 L 50 40 L 45 50 L 35 45" opacity="0.3"/>
-        </g>
-        
-        {/* Orion constellation */}
-        <g stroke="url(#constellation-gradient)" strokeWidth="0.5" fill="none">
-          <path d="M 70 60 L 75 50 L 80 45 L 85 55 L 80 65 L 75 70 L 70 75" opacity="0.2"/>
-        </g>
-      </svg>
-
-      {/* Nebula effect */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          background: `
-            radial-gradient(ellipse at 20% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 70%, rgba(75, 0, 130, 0.08) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 60%)
-          `
-        }}
-      />
+        <div 
+          className="absolute w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"
+          style={{ 
+            top: '60%',
+            animationDuration: '4s',
+            animationDelay: '1s'
+          }}
+        />
+      </div>
     </div>
   );
 }
