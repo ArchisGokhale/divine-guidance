@@ -184,7 +184,7 @@ export default function Home() {
                     type="date"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
-                    className="mb-4 bg-deep-indigo/50 border-warm-gold/30 text-cream focus:border-warm-gold"
+                    className="mb-4 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream placeholder:text-deep-indigo/70 font-medium"
                   />
                   <Button
                     onClick={calculateSpiritualNumber}

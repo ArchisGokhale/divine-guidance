@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-warm-gold/20 pt-6">
-            <p className="text-cream/60 text-sm">© 2024 Sheetal Ghate. All rights reserved. | Divine guidance through ancient wisdom</p>
+            <p className="text-cream/60 text-sm">© 2025 Sheetal Ghate. All rights reserved. | Divine guidance through ancient wisdom</p>
           </div>
         </div>
       </div>

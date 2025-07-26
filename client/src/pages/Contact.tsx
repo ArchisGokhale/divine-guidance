@@ -96,7 +96,7 @@ export default function Contact() {
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream placeholder-cream/50 focus:border-warm-gold"
+                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -111,7 +111,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream placeholder-cream/50 focus:border-warm-gold"
+                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                     required
                     value={formData.whatsapp}
                     onChange={handleInputChange}
-                    className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream placeholder-cream/50 focus:border-warm-gold"
+                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream font-medium"
                     placeholder="+91 9876543210"
                   />
                 </div>
@@ -135,10 +135,10 @@ export default function Contact() {
                 <div>
                   <Label className="text-cream font-medium">Preferred Reading *</Label>
                   <Select value={formData.service} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream focus:border-warm-gold">
+                    <SelectTrigger className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold font-medium">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
-                    <SelectContent className="bg-deep-indigo border-warm-gold/30">
+                    <SelectContent className="bg-cream border-warm-gold/50">
                       <SelectItem value="palmistry">Palm Reading (₹1,200)</SelectItem>
                       <SelectItem value="kundali">Kundali & Birth Chart (₹1,800)</SelectItem>
                       <SelectItem value="horoscope">Horoscope & Remedies (From ₹500)</SelectItem>
@@ -159,7 +159,7 @@ export default function Contact() {
                       type="date"
                       value={formData.date}
                       onChange={handleInputChange}
-                      className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream focus:border-warm-gold"
+                      className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream font-medium"
                     />
                   </div>
                   <div>
@@ -170,7 +170,7 @@ export default function Contact() {
                       type="time"
                       value={formData.time}
                       onChange={handleInputChange}
-                      className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream focus:border-warm-gold"
+                      className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo focus:border-warm-gold focus:bg-cream font-medium"
                     />
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="mt-2 bg-deep-indigo/50 border-warm-gold/30 text-cream placeholder-cream/50 focus:border-warm-gold resize-none"
+                    className="mt-2 bg-cream/90 border-2 border-warm-gold/50 text-deep-indigo placeholder:text-deep-indigo/70 focus:border-warm-gold focus:bg-cream resize-none font-medium"
                     placeholder="Share any specific questions or areas you'd like guidance on..."
                   />
                 </div>
