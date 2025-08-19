@@ -83,7 +83,7 @@ export default function StarfieldBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700">
+    <div className="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700">
       
       {/* Subtle geometric pattern */}
       <div className="absolute inset-0 opacity-5">
