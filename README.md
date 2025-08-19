@@ -66,15 +66,15 @@ Any Node hosting works (Render, Railway, Fly.io, Azure, etc.).
 - Start: `npm start`
 - Ensure the service exposes `PORT` and runs `npm start`.
 
-### GitHub Pages (static hosting)
-This repo includes a workflow that deploys the built client to GitHub Pages automatically on pushes to `main`.
+### Vercel (recommended)
+- Install Vercel CLI: `npm i -g vercel`
+- From project root, run: `vercel` (first time) and then `vercel --prod` to deploy.
+- Framework: Other; Output directory: `dist/public` (after `npm run build`).
+- Or connect the GitHub repo in the Vercel Dashboard and set the build command to `npm run build` and the output directory to `dist/public`.
 
-Deployed URL (after first successful run):
-https://archisgokhale.github.io/divine-guidance/
-
-Notes:
-- The site is a static export of the Vite client (`client/`), built to `dist/public`.
-- The workflow publishes only the client assets; the Express server isn’t used on Pages.
+Disable GitHub Pages:
+- Remove the workflow under `.github/workflows/deploy-pages.yml` (already removed).
+- In GitHub > Settings > Pages, set Source to “None”.
 
 ## License
 MIT — see `package.json` license field.

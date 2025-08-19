@@ -19,7 +19,7 @@ export default defineConfig({
         ]
       : []),
   ],
-  // When deploying to GitHub Pages for a project site, assets must be served from /<repo-name>/
+  // Default to root for Vercel/any host; enable Pages base only when GITHUB_PAGES=true
   base: isPages ? `/${repoName}/` : "/",
   resolve: {
     alias: {
