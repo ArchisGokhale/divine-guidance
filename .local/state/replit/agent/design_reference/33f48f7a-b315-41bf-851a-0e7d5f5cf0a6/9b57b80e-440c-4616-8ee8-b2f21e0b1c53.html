@@ -1,0 +1,859 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheetal Ghate - Divine Guidance in Palmistry, Astrology & Horoscope</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'devanagari': ['Noto Serif Devanagari', 'serif'],
+                    },
+                    colors: {
+                        'deep-indigo': '#1e1b4b',
+                        'royal-purple': '#6366f1',
+                        'warm-gold': '#f59e0b',
+                        'copper': '#ea580c',
+                        'cream': '#fef7ed',
+                        'soft-white': '#fafafa',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b' },
+                            '100%': { boxShadow: '0 0 10px #f59e0b, 0 0 20px #f59e0b, 0 0 30px #f59e0b' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.8) 0%, rgba(245, 158, 11, 0.6) 100%);
+        }
+        .mandala-bg {
+            background-image: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+        }
+        .glow-border {
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #f59e0b, #ea580c) border-box;
+            border-radius: 12px;
+        }
+        .nav-active {
+            color: #f59e0b;
+            border-bottom: 2px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-deep-indigo text-cream font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-deep-indigo/95 backdrop-blur-sm z-50 border-b border-warm-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex-shrink-0">
+                    <h1 class="text-lg sm:text-xl font-playfair font-semibold text-warm-gold">
+                        Sheetal Ghate
+                        <span class="block text-sm font-devanagari text-cream/80">ज्योतिर्विद्या और हस्तरेखा विशेषज्ञ</span>
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 text-sm font-medium hover:text-warm-gold transition-all nav-active">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 text-sm font-medium hover:text-warm-gold transition-all">About</a>
+                        <a href="#services" class="nav-link px-3 py-2 text-sm font-medium hover:text-warm-gold transition-all">Services</a>
+                        <a href="#horoscope" class="nav-link px-3 py-2 text-sm font-medium hover:text-warm-gold transition-all">Horoscope</a>
+                        <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium hover:text-warm-gold transition-all">Book Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-cream hover:text-warm-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-deep-indigo/95 border-t border-warm-gold/20">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-base font-medium hover:text-warm-gold transition-all">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-warm-gold transition-all">About</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium hover:text-warm-gold transition-all">Services</a>
+                <a href="#horoscope" class="block px-3 py-2 text-base font-medium hover:text-warm-gold transition-all">Horoscope</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium hover:text-warm-gold transition-all">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="min-h-screen relative overflow-hidden">
+        <!-- Traditional Indian celestial artwork background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-deep-indigo via-royal-purple to-deep-indigo">
+            <!-- Decorative mandala background -->
+            <div class="absolute top-20 right-10 w-96 h-96 opacity-10">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" alt="Spiritual mandala design" class="w-full h-full object-contain animate-float" />
+            </div>
+            <!-- Celestial elements -->
+            <div class="absolute bottom-20 left-10 w-64 h-64 opacity-20">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" alt="Celestial moon and stars" class="w-full h-full object-contain" />
+            </div>
+        </div>
+        
+        <div class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <!-- Sanskrit Quote -->
+                <div class="mb-8 animate-fade-in">
+                    <p class="text-2xl sm:text-3xl font-devanagari text-warm-gold mb-2">"तत् त्वम् असि"</p>
+                    <p class="text-lg sm:text-xl font-playfair italic text-cream/90">You are that divine self</p>
+                </div>
+                
+                <!-- Hero Content -->
+                <div class="mb-12 animate-fade-in">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-playfair font-bold text-cream mb-6">
+                        Divine Guidance
+                        <span class="block text-warm-gold">Awaits You</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-cream/80 max-w-3xl mx-auto leading-relaxed">
+                        Discover your spiritual path through ancient wisdom of Palmistry, Vedic Astrology, and Horoscope readings
+                    </p>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
+                    <button class="px-8 py-4 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg animate-glow">
+                        <i class="fas fa-compass mr-2"></i>
+                        Discover Your Spiritual Path
+                    </button>
+                    <button class="px-8 py-4 border-2 border-warm-gold text-warm-gold font-semibold rounded-full hover:bg-warm-gold hover:text-deep-indigo transition-all duration-300 text-lg">
+                        <i class="fas fa-calendar-plus mr-2"></i>
+                        Schedule a Reading
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Service Cards Section -->
+        <div class="relative pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-playfair font-bold text-center text-cream mb-4">What Sheetal Offers</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-12"></div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Palmistry Card -->
+                    <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
+                                <i class="fas fa-hand-paper text-2xl text-deep-indigo"></i>
+                            </div>
+                            <h3 class="text-2xl font-playfair font-semibold text-cream mb-3">Palmistry</h3>
+                            <p class="text-sm font-devanagari text-warm-gold mb-4">हस्त रेखा</p>
+                            <p class="text-cream/80 leading-relaxed">
+                                Unlock the secrets written in your palms. Ancient palm analysis reveals your life path, love destiny, and spiritual journey through sacred hand reading techniques.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Vedic Astrology Card -->
+                    <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
+                                <i class="fas fa-dharmachakra text-2xl text-deep-indigo"></i>
+                            </div>
+                            <h3 class="text-2xl font-playfair font-semibold text-cream mb-3">Vedic Astrology</h3>
+                            <p class="text-sm font-devanagari text-warm-gold mb-4">ज्योतिष शास्त्र</p>
+                            <p class="text-cream/80 leading-relaxed">
+                                Connect with cosmic energies through authentic Vedic astrology. Birth chart analysis, planetary positions, and karmic insights guide your spiritual evolution.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Horoscope Card -->
+                    <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center group-hover:animate-glow">
+                                <i class="fas fa-moon text-2xl text-deep-indigo"></i>
+                            </div>
+                            <h3 class="text-2xl font-playfair font-semibold text-cream mb-3">Personal Horoscopes</h3>
+                            <p class="text-sm font-devanagari text-warm-gold mb-4">राशिफल</p>
+                            <p class="text-cream/80 leading-relaxed">
+                                Receive personalized cosmic guidance tailored to your unique energy. Daily predictions, spiritual remedies, and celestial timing for important decisions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative">
+        <!-- Lotus decoration -->
+        <div class="absolute top-10 left-10 w-32 h-32 opacity-20">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Spiritual lotus flower" class="w-full h-full object-contain" />
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Section -->
+                <div class="text-center lg:text-left">
+                    <div class="relative inline-block">
+                        <!-- Placeholder for Sheetal's image -->
+                        <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-warm-gold/20 to-copper/20 border-4 border-warm-gold/50 flex items-center justify-center">
+                            <i class="fas fa-user text-6xl text-warm-gold"></i>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center animate-glow">
+                            <i class="fas fa-om text-xl text-deep-indigo"></i>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-xl font-playfair italic text-warm-gold">"My goal is to align your inner soul with the cosmic rhythm."</p>
+                    </div>
+                </div>
+                
+                <!-- Bio Section -->
+                <div>
+                    <h2 class="text-4xl font-playfair font-bold text-cream mb-6">About Sheetal Ghate</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mb-8"></div>
+                    
+                    <div class="space-y-6 text-cream/90 text-lg leading-relaxed">
+                        <p>
+                            With over 15 years of dedicated practice in the ancient sciences of Vedic astrology and palmistry, Sheetal Ghate has become a trusted spiritual guide for thousands seeking divine clarity and cosmic alignment.
+                        </p>
+                        <p>
+                            Rooted in authentic Vedic lineage and blessed with spiritual training from renowned gurukuls, Sheetal has touched the lives of 10,000+ clients across India and abroad, offering personalized readings that bridge ancient wisdom with modern understanding.
+                        </p>
+                        <p>
+                            Fluent in Hindi, Marathi, and English, Sheetal ensures that spiritual guidance transcends language barriers, making divine wisdom accessible to seekers from all walks of life.
+                        </p>
+                    </div>
+                    
+                    <!-- Credentials -->
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-playfair font-semibold text-warm-gold mb-6">Spiritual Credentials</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
+                                <div class="text-2xl text-warm-gold mr-4">🔱</div>
+                                <span class="text-cream/90">Certified in KP & Nadi Astrology</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
+                                <div class="text-2xl text-warm-gold mr-4">🌺</div>
+                                <span class="text-cream/90">Trained in Palmistry from Kashi Gurukul</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
+                                <div class="text-2xl text-warm-gold mr-4">🔯</div>
+                                <span class="text-cream/90">Member – Indian Council of Occult Studies</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-cream/10 rounded-lg border border-warm-gold/30">
+                                <div class="text-2xl text-warm-gold mr-4">📿</div>
+                                <span class="text-cream/90">Personalized readings with Vedic remedies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-deep-indigo relative">
+        <!-- Vedic symbols background -->
+        <div class="absolute top-0 right-0 w-64 h-64 opacity-10">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" alt="Vedic astrology symbols" class="w-full h-full object-contain" />
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-playfair font-bold text-cream mb-4">Sacred Services</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
+                <p class="text-xl text-cream/80 max-w-3xl mx-auto">
+                    Choose from our comprehensive range of spiritual guidance services, each designed to illuminate your path and align you with cosmic energies.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Palm Reading -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🪷</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Palm Reading</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">₹1,200</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Unlock the secrets in your life, love line, and destiny through ancient palm analysis. Discover your true potential and karmic path.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Kundali & Birth Chart -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🌙</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Kundali & Birth Chart</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">₹1,800</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Personalized Lagna chart based on birth date/time/place using authentic Vedic astrology principles and cosmic calculations.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Horoscope & Remedies -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🔮</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Horoscope & Remedies</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">From ₹500</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Daily/Weekly predictions with Graha shanti and gemstone suggestions. Spiritual remedies for planetary healing.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Marriage & Compatibility -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">💞</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Marriage & Compatibility</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">₹1,500</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Matchmaking with Mangal dosha analysis and karmic insights. Discover your soul mate through cosmic compatibility.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Numerology -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 hover:border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🔢</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Numerology & Name Correction</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">₹700</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Spiritual vibrations based on numbers, name compatibility analysis, and cosmic number alignment for prosperity.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Special Consultation -->
+                <div class="bg-gradient-to-br from-warm-gold/20 to-copper/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-warm-gold hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">⭐</div>
+                        <h3 class="text-2xl font-playfair font-semibold text-cream mb-2">Complete Spiritual Consultation</h3>
+                        <div class="text-3xl font-bold text-warm-gold mb-4">₹2,500</div>
+                        <p class="text-cream/80 leading-relaxed mb-6">
+                            Comprehensive session combining palmistry, astrology, and numerology with personalized spiritual remedies and guidance.
+                        </p>
+                        <button class="w-full px-6 py-3 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg transition-all duration-300 animate-glow">
+                            Book Premium Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOROSCOPE SECTION -->
+    <section id="horoscope" class="py-20 bg-gradient-to-br from-royal-purple/20 to-deep-indigo relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-playfair font-bold text-cream mb-4">Daily Horoscope</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
+                <p class="text-xl text-cream/80 max-w-3xl mx-auto">
+                    Discover what the stars have aligned for you today. Select your zodiac sign for personalized cosmic guidance.
+                </p>
+            </div>
+            
+            <!-- Zodiac Sign Selector -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="aries">
+                    <div class="text-3xl mb-2">♈</div>
+                    <div class="font-semibold text-cream">Aries</div>
+                    <div class="text-sm font-devanagari text-warm-gold">मेष</div>
+                    <div class="text-xs text-cream/70 mt-1">Mar 21 – Apr 19</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="taurus">
+                    <div class="text-3xl mb-2">♉</div>
+                    <div class="font-semibold text-cream">Taurus</div>
+                    <div class="text-sm font-devanagari text-warm-gold">वृषभ</div>
+                    <div class="text-xs text-cream/70 mt-1">Apr 20 – May 20</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="gemini">
+                    <div class="text-3xl mb-2">♊</div>
+                    <div class="font-semibold text-cream">Gemini</div>
+                    <div class="text-sm font-devanagari text-warm-gold">मिथुन</div>
+                    <div class="text-xs text-cream/70 mt-1">May 21 – Jun 20</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="cancer">
+                    <div class="text-3xl mb-2">♋</div>
+                    <div class="font-semibold text-cream">Cancer</div>
+                    <div class="text-sm font-devanagari text-warm-gold">कर्क</div>
+                    <div class="text-xs text-cream/70 mt-1">Jun 21 – Jul 22</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="leo">
+                    <div class="text-3xl mb-2">♌</div>
+                    <div class="font-semibold text-cream">Leo</div>
+                    <div class="text-sm font-devanagari text-warm-gold">सिंह</div>
+                    <div class="text-xs text-cream/70 mt-1">Jul 23 – Aug 22</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="virgo">
+                    <div class="text-3xl mb-2">♍</div>
+                    <div class="font-semibold text-cream">Virgo</div>
+                    <div class="text-sm font-devanagari text-warm-gold">कन्या</div>
+                    <div class="text-xs text-cream/70 mt-1">Aug 23 – Sep 22</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="libra">
+                    <div class="text-3xl mb-2">♎</div>
+                    <div class="font-semibold text-cream">Libra</div>
+                    <div class="text-sm font-devanagari text-warm-gold">तुला</div>
+                    <div class="text-xs text-cream/70 mt-1">Sep 23 – Oct 22</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="scorpio">
+                    <div class="text-3xl mb-2">♏</div>
+                    <div class="font-semibold text-cream">Scorpio</div>
+                    <div class="text-sm font-devanagari text-warm-gold">वृश्चिक</div>
+                    <div class="text-xs text-cream/70 mt-1">Oct 23 – Nov 21</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="sagittarius">
+                    <div class="text-3xl mb-2">♐</div>
+                    <div class="font-semibold text-cream">Sagittarius</div>
+                    <div class="text-sm font-devanagari text-warm-gold">धनु</div>
+                    <div class="text-xs text-cream/70 mt-1">Nov 22 – Dec 21</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="capricorn">
+                    <div class="text-3xl mb-2">♑</div>
+                    <div class="font-semibold text-cream">Capricorn</div>
+                    <div class="text-sm font-devanagari text-warm-gold">मकर</div>
+                    <div class="text-xs text-cream/70 mt-1">Dec 22 – Jan 19</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="aquarius">
+                    <div class="text-3xl mb-2">♒</div>
+                    <div class="font-semibold text-cream">Aquarius</div>
+                    <div class="text-sm font-devanagari text-warm-gold">कुम्भ</div>
+                    <div class="text-xs text-cream/70 mt-1">Jan 20 – Feb 18</div>
+                </div>
+                
+                <div class="zodiac-sign bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-warm-gold/30 hover:border-warm-gold hover:bg-cream/20 transition-all duration-300 cursor-pointer text-center" data-sign="pisces">
+                    <div class="text-3xl mb-2">♓</div>
+                    <div class="font-semibold text-cream">Pisces</div>
+                    <div class="text-sm font-devanagari text-warm-gold">मीन</div>
+                    <div class="text-xs text-cream/70 mt-1">Feb 19 – Mar 20</div>
+                </div>
+            </div>
+            
+            <!-- Horoscope Display -->
+            <div id="horoscope-display" class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <h3 class="text-2xl font-playfair font-semibold text-warm-gold mb-4">Select your zodiac sign above</h3>
+                    <p class="text-cream/80">Click on your zodiac sign to reveal today's cosmic guidance and spiritual insights.</p>
+                </div>
+            </div>
+            
+            <!-- Mantra of the Day -->
+            <div class="mt-12 text-center">
+                <div class="bg-gradient-to-r from-warm-gold/20 to-copper/20 rounded-2xl p-8 border border-warm-gold/30 max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-playfair font-semibold text-warm-gold mb-4">Mantra of the Day</h3>
+                    <p class="text-xl font-devanagari text-cream mb-2">ॐ गं गणपतये नमः</p>
+                    <p class="text-cream/80 italic">Om Gam Ganapataye Namaha - Invoke wisdom and remove obstacles from your path</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-deep-indigo relative">
+        <!-- Spiritual background elements -->
+        <div class="absolute bottom-10 right-10 w-48 h-48 opacity-10">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Spiritual mandala" class="w-full h-full object-contain animate-float" />
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-playfair font-bold text-cream mb-4">Book Your Divine Session</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
+                <p class="text-xl text-cream/80 max-w-3xl mx-auto">
+                    Ready to embark on your spiritual journey? Connect with Sheetal for personalized cosmic guidance and divine insights.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
+                    <form class="space-y-6">
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream placeholder-cream/50 focus:border-warm-gold focus:outline-none transition-all" placeholder="Enter your full name">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream placeholder-cream/50 focus:border-warm-gold focus:outline-none transition-all" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <!-- WhatsApp Number -->
+                        <div>
+                            <label class="block text-cream font-medium mb-2">WhatsApp Number *</label>
+                            <input type="tel" required class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream placeholder-cream/50 focus:border-warm-gold focus:outline-none transition-all" placeholder="+91 9876543210">
+                        </div>
+                        
+                        <!-- Preferred Reading -->
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Preferred Reading *</label>
+                            <select required class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream focus:border-warm-gold focus:outline-none transition-all">
+                                <option value="">Select a service</option>
+                                <option value="palmistry">Palm Reading (₹1,200)</option>
+                                <option value="kundali">Kundali & Birth Chart (₹1,800)</option>
+                                <option value="horoscope">Horoscope & Remedies (From ₹500)</option>
+                                <option value="marriage">Marriage & Compatibility (₹1,500)</option>
+                                <option value="numerology">Numerology & Name Correction (₹700)</option>
+                                <option value="complete">Complete Spiritual Consultation (₹2,500)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Preferred Date/Time -->
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-cream font-medium mb-2">Preferred Date</label>
+                                <input type="date" class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream focus:border-warm-gold focus:outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-cream font-medium mb-2">Preferred Time</label>
+                                <input type="time" class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream focus:border-warm-gold focus:outline-none transition-all">
+                            </div>
+                        </div>
+                        
+                        <!-- Message -->
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Message / Questions</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-deep-indigo/50 border border-warm-gold/30 rounded-lg text-cream placeholder-cream/50 focus:border-warm-gold focus:outline-none transition-all resize-none" placeholder="Share any specific questions or areas you'd like guidance on..."></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-warm-gold to-copper text-deep-indigo font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg animate-glow">
+                            <i class="fas fa-crystal-ball mr-2"></i>
+                            Request My Divine Session
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-cream/10 backdrop-blur-sm rounded-2xl p-8 border border-warm-gold/30">
+                        <h3 class="text-2xl font-playfair font-semibold text-warm-gold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-deep-indigo"></i>
+                                </div>
+                                <div>
+                                    <div class="text-cream font-medium">Email</div>
+                                    <div class="text-cream/80">sheetalghate.astrology@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-deep-indigo"></i>
+                                </div>
+                                <div>
+                                    <div class="text-cream font-medium">Phone</div>
+                                    <div class="text-cream/80">+91 XXXXXXXXXX</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-deep-indigo"></i>
+                                </div>
+                                <div>
+                                    <div class="text-cream font-medium">WhatsApp</div>
+                                    <div class="text-cream/80">Available for consultations</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-instagram text-deep-indigo"></i>
+                                </div>
+                                <div>
+                                    <div class="text-cream font-medium">Instagram</div>
+                                    <div class="text-cream/80">@sheetalghate_astrology</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Spiritual Quote -->
+                    <div class="bg-gradient-to-r from-warm-gold/20 to-copper/20 rounded-2xl p-8 border border-warm-gold/30 text-center">
+                        <div class="text-6xl text-warm-gold mb-4">🕉</div>
+                        <p class="text-lg font-devanagari text-cream mb-2">सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः</p>
+                        <p class="text-cream/80 italic">May all beings be happy, may all beings be healthy</p>
+                        <div class="mt-6">
+                            <p class="text-warm-gold font-playfair">Your spiritual journey begins with a single step</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-indigo/90 border-t border-warm-gold/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-playfair font-semibold text-warm-gold mb-2">Sheetal Ghate</h3>
+                    <p class="text-cream/80 font-devanagari">ज्योतिर्विद्या और हस्तरेखा विशेषज्ञ</p>
+                </div>
+                
+                <div class="flex justify-center space-x-8 mb-6">
+                    <a href="#home" class="text-cream/80 hover:text-warm-gold transition-all">Home</a>
+                    <a href="#about" class="text-cream/80 hover:text-warm-gold transition-all">About</a>
+                    <a href="#services" class="text-cream/80 hover:text-warm-gold transition-all">Services</a>
+                    <a href="#horoscope" class="text-cream/80 hover:text-warm-gold transition-all">Horoscope</a>
+                    <a href="#contact" class="text-cream/80 hover:text-warm-gold transition-all">Contact</a>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <div class="w-10 h-10 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center hover:scale-110 transition-all cursor-pointer">
+                        <i class="fab fa-instagram text-deep-indigo"></i>
+                    </div>
+                    <div class="w-10 h-10 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center hover:scale-110 transition-all cursor-pointer">
+                        <i class="fab fa-whatsapp text-deep-indigo"></i>
+                    </div>
+                    <div class="w-10 h-10 bg-gradient-to-br from-warm-gold to-copper rounded-full flex items-center justify-center hover:scale-110 transition-all cursor-pointer">
+                        <i class="fas fa-envelope text-deep-indigo"></i>
+                    </div>
+                </div>
+                
+                <div class="border-t border-warm-gold/20 pt-6">
+                    <p class="text-cream/60 text-sm">© 2024 Sheetal Ghate. All rights reserved. | Divine guidance through ancient wisdom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn?.addEventListener('click', function() {
+                mobileMenu?.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Close mobile menu if open
+                        mobileMenu?.classList.add('hidden');
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('nav-active');
+                        });
+                        this.classList.add('nav-active');
+                    }
+                });
+            });
+
+            // Horoscope data
+            const horoscopeData = {
+                aries: {
+                    title: "Aries - मेष",
+                    prediction: "Today brings fiery energy and new opportunities. Mars energizes your path forward. Trust your instincts and take bold action. A chance encounter may lead to unexpected blessings.",
+                    mantra: "ॐ अं अंगारकाय नमः",
+                    lucky: "Number: 7, Color: Red, Time: Morning"
+                },
+                taurus: {
+                    title: "Taurus - वृषभ", 
+                    prediction: "Venus blesses you with harmony and abundance today. Focus on relationships and creative pursuits. Financial matters show positive momentum. Patience will be rewarded.",
+                    mantra: "ॐ शं शुक्राय नमः",
+                    lucky: "Number: 6, Color: Green, Time: Evening"
+                },
+                gemini: {
+                    title: "Gemini - मिथुन",
+                    prediction: "Mercury enhances communication and learning. A day for networking and sharing ideas. Travel or short journeys prove beneficial. Keep an open mind to new perspectives.",
+                    mantra: "ॐ बुं बुधाय नमः", 
+                    lucky: "Number: 5, Color: Yellow, Time: Afternoon"
+                },
+                cancer: {
+                    title: "Cancer - कर्क",
+                    prediction: "The Moon illuminates your emotional depths today. Family connections grow stronger. Trust your intuition in decision-making. Home and nurturing bring special joy.",
+                    mantra: "ॐ सों सोमाय नमः",
+                    lucky: "Number: 2, Color: Silver, Time: Night"
+                },
+                leo: {
+                    title: "Leo - सिंह",
+                    prediction: "The Sun radiates confidence and leadership energy. Your charisma attracts recognition and opportunities. Creative projects flourish. Share your light with others generously.",
+                    mantra: "ॐ ह्रां ह्रीं सूर्याय नमः",
+                    lucky: "Number: 1, Color: Gold, Time: Noon"
+                },
+                virgo: {
+                    title: "Virgo - कन्या",
+                    prediction: "Mercury guides you toward practical solutions and healing. Focus on health and service to others. Attention to detail brings success. Organization leads to clarity.",
+                    mantra: "ॐ बुं बुधाय नमः",
+                    lucky: "Number: 6, Color: Navy Blue, Time: Morning"
+                },
+                libra: {
+                    title: "Libra - तुला",
+                    prediction: "Venus brings balance and beauty to your day. Partnerships and artistic endeavors are favored. Seek harmony in all interactions. Justice and fairness guide your choices.",
+                    mantra: "ॐ शुं शुक्राय नमः",
+                    lucky: "Number: 7, Color: Pink, Time: Evening"
+                },
+                scorpio: {
+                    title: "Scorpio - वृश्चिक",
+                    prediction: "Mars empowers transformation and deep insights. Uncover hidden truths and embrace change. Your magnetic presence attracts the right people. Trust the process of renewal.",
+                    mantra: "ॐ अं अंगारकाय नमः",
+                    lucky: "Number: 9, Color: Maroon, Time: Late Night"
+                },
+                sagittarius: {
+                    title: "Sagittarius - धनु",
+                    prediction: "Jupiter expands your horizons and wisdom today. Adventure and learning call to you. Share your knowledge and inspire others. Long-distance connections prove meaningful.",
+                    mantra: "ॐ गुं गुरवे नमः",
+                    lucky: "Number: 3, Color: Orange, Time: Morning"
+                },
+                capricorn: {
+                    title: "Capricorn - मकर",
+                    prediction: "Saturn rewards your discipline and hard work. Career matters progress steadily. Structure and responsibility lead to achievement. Your patience builds lasting success.",
+                    mantra: "ॐ शं शनैश्चराय नमः",
+                    lucky: "Number: 8, Color: Black, Time: Evening"
+                },
+                aquarius: {
+                    title: "Aquarius - कुम्भ",
+                    prediction: "Saturn and Uranus inspire innovation and humanitarian efforts. Group activities and friendships flourish. Your unique vision gains recognition. Technology aids your goals.",
+                    mantra: "ॐ शं शनैश्चराय नमः",
+                    lucky: "Number: 11, Color: Electric Blue, Time: Afternoon"
+                },
+                pisces: {
+                    title: "Pisces - मीन",
+                    prediction: "Jupiter enhances your spiritual connection and intuition. Dreams carry important messages. Compassion and creativity flow naturally. Water-related activities bring peace.",
+                    mantra: "ॐ गुं गुरवे नमः",
+                    lucky: "Number: 12, Color: Sea Green, Time: Dawn"
+                }
+            };
+
+            // Zodiac sign selection
+            document.querySelectorAll('.zodiac-sign').forEach(sign => {
+                sign.addEventListener('click', function() {
+                    // Remove active state from all signs
+                    document.querySelectorAll('.zodiac-sign').forEach(s => {
+                        s.classList.remove('border-warm-gold', 'bg-cream/20');
+                        s.classList.add('border-warm-gold/30', 'bg-cream/10');
+                    });
+                    
+                    // Add active state to clicked sign
+                    this.classList.remove('border-warm-gold/30', 'bg-cream/10');
+                    this.classList.add('border-warm-gold', 'bg-cream/20');
+                    
+                    // Get horoscope data
+                    const signKey = this.getAttribute('data-sign');
+                    const horoscope = horoscopeData[signKey];
+                    
+                    // Update display
+                    const display = document.getElementById('horoscope-display');
+                    if (horoscope && display) {
+                        display.innerHTML = `
+                            <div class="text-center">
+                                <h3 class="text-3xl font-playfair font-semibold text-warm-gold mb-4">${horoscope.title}</h3>
+                                <div class="w-16 h-1 bg-gradient-to-r from-warm-gold to-copper mx-auto mb-6"></div>
+                                <p class="text-lg text-cream/90 leading-relaxed mb-6">${horoscope.prediction}</p>
+                                <div class="bg-deep-indigo/30 rounded-xl p-6 mb-6">
+                                    <h4 class="text-xl font-semibold text-warm-gold mb-2">Today's Mantra</h4>
+                                    <p class="text-lg font-devanagari text-cream">${horoscope.mantra}</p>
+                                </div>
+                                <div class="text-sm text-cream/70">
+                                    <p><strong>Lucky Elements:</strong> ${horoscope.lucky}</p>
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+            });
+
+            // Form submission handling (placeholder)
+            document.querySelector('form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form submission logic (integrate with FormSubmit, Netlify, or backend)
+                alert('Thank you for your interest! We will contact you soon to schedule your divine session.');
+            });
+
+            // Scroll-based animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.animate-fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
