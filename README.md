@@ -66,5 +66,15 @@ Any Node hosting works (Render, Railway, Fly.io, Azure, etc.).
 - Start: `npm start`
 - Ensure the service exposes `PORT` and runs `npm start`.
 
+### GitHub Pages (static hosting)
+This repo includes a workflow that deploys the built client to GitHub Pages automatically on pushes to `main`.
+
+Deployed URL (after first successful run):
+https://archisgokhale.github.io/divine-guidance/
+
+Notes:
+- The site is a static export of the Vite client (`client/`), built to `dist/public`.
+- The workflow publishes only the client assets; the Express server isn’t used on Pages.
+
 ## License
 MIT — see `package.json` license field.

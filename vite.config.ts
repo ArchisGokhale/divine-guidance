@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+const repoName = "divine-guidance";
+const isPages = process.env.GITHUB_PAGES === "true";
+
 export default defineConfig({
   plugins: [
     react(),
@@ -16,6 +19,8 @@ export default defineConfig({
         ]
       : []),
   ],
+  // When deploying to GitHub Pages for a project site, assets must be served from /<repo-name>/
+  base: isPages ? `/${repoName}/` : "/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
